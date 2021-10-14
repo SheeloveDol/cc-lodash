@@ -59,7 +59,15 @@ const _ = {
       return undefined
     }
   },
-  
+
+
+  drop(array, number) {
+    if (number === undefined) {
+      number = 1;
+    };
+    let dropped = array.slice(number);
+    return dropped;
+  },
 
 }
 
