@@ -69,6 +69,15 @@ const _ = {
     return dropped;
   },
 
+  dropWhile(array, predicate) {
+    const cb = (element, index) => {
+      return !predicate(element, index, array);
+    };
+    let dropNumber = array.findIndex(cb);
+    let droppedArray = this.drop(array, dropNumber);
+    return droppedArray;
+  },
+
 }
 
 
