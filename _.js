@@ -78,6 +78,16 @@ const _ = {
     return droppedArray;
   },
 
+
+  chunk(array, size=1) {
+    let newArrChunks = [];
+    for (let i = 0; i < array.length; i += size) {
+      let arrayChunk = array.slice(i, i+size);
+      newArrChunks.push(arrayChunk);
+    }
+    return newArrChunks
+  },
+
 }
 
 
